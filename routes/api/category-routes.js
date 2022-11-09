@@ -42,18 +42,30 @@ router.post('/', async (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-  // update a category by its `id` value
+  Category.update(
+    req.body, {where: {
+      id: req.params.id,
+    }}
+  )
+  .then((updatedCategory) => {
+    // Sends the updated book as a json response
+    res.json(updatedCategory);
+  })
+  .catch((err) => res.json(err));
 });
 
 router.delete('/:id', (req, res) => {
-  // delete a category by its `id` value
+  Category.destroy({
+    where: {
+      id: req.params.id,
+    },
+  })
+    .then((deleteCategory) => {
+      res.json(deleteCategory);
+    })
+    .catch((err) => res.json(err));
 });
 
 module.exports = router;
 
 
-// activity 7 bookRoutes for the .put route and .delete route
-
-// finish the routes 
-
-// rewrite category routes in product routes and tag routes 
