@@ -2,6 +2,8 @@
 
 <img src="./13screenshot.png" alt="App screenshot">
 
+<a href="https://drive.google.com/file/d/1O5lpW1TULoUufvKFgvQo5RFrKAeo-UwQ/view" target="_blank">Video Walkthrough</a>
+
 ## Description
 
 Using ORM update and edit the backend of your ecommerce storefront. 
